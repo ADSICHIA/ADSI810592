@@ -56,7 +56,7 @@ public class Formulario extends javax.swing.JFrame {
 
         jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 0)));
 
-        jButton1.setBackground(new java.awt.Color(252, 115, 35));
+        jButton1.setBackground(new java.awt.Color(94, 179, 25));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Enviar");
