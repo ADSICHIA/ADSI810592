@@ -34,13 +34,14 @@ String roll;
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btnConsultar = new javax.swing.JButtonShaper();
-        btnReportes = new javax.swing.JButtonShaper();
-        btnActualizacion = new javax.swing.JButtonShaper();
-        btnRegistroUsuarios = new javax.swing.JButtonShaper();
-        btnRegistroDispositivos = new javax.swing.JButtonShaper();
-        jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        btnRegistroUsuarios = new javax.swing.JButton();
+        btnRegistroDispositivos = new javax.swing.JButton();
+        btnConsulta = new javax.swing.JButton();
+        btnActualizacion = new javax.swing.JButton();
+        btnReportes = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -57,35 +58,7 @@ String roll;
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        btnConsultar.setBackground(new java.awt.Color(94, 179, 25));
-        btnConsultar.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
-        btnConsultar.setForeground(new java.awt.Color(255, 255, 255));
-        btnConsultar.setText("Consulta");
-        btnConsultar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConsultarActionPerformed(evt);
-            }
-        });
-
-        btnReportes.setBackground(new java.awt.Color(94, 179, 25));
-        btnReportes.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
-        btnReportes.setForeground(new java.awt.Color(255, 255, 255));
-        btnReportes.setText("Reportes");
-        btnReportes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReportesActionPerformed(evt);
-            }
-        });
-
-        btnActualizacion.setBackground(new java.awt.Color(94, 179, 25));
-        btnActualizacion.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
-        btnActualizacion.setForeground(new java.awt.Color(255, 255, 255));
-        btnActualizacion.setText("Actualizacion");
-        btnActualizacion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnActualizacionActionPerformed(evt);
-            }
-        });
+        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Users\\criizziiy\\Desktop\\logoSena.jpg")); // NOI18N
 
         btnRegistroUsuarios.setBackground(new java.awt.Color(252, 115, 35));
         btnRegistroUsuarios.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
@@ -107,55 +80,101 @@ String roll;
             }
         });
 
+        btnConsulta.setBackground(new java.awt.Color(94, 179, 25));
+        btnConsulta.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
+        btnConsulta.setForeground(new java.awt.Color(255, 255, 255));
+        btnConsulta.setText("Consulta");
+        btnConsulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultaActionPerformed(evt);
+            }
+        });
+
+        btnActualizacion.setBackground(new java.awt.Color(94, 179, 25));
+        btnActualizacion.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
+        btnActualizacion.setForeground(new java.awt.Color(255, 255, 255));
+        btnActualizacion.setText("Actualizacion");
+        btnActualizacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnActualizacionActionPerformed(evt);
+            }
+        });
+
+        btnReportes.setBackground(new java.awt.Color(94, 179, 25));
+        btnReportes.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
+        btnReportes.setForeground(new java.awt.Color(255, 255, 255));
+        btnReportes.setText("Reportes");
+        btnReportes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReportesActionPerformed(evt);
+            }
+        });
+
+        jPanel2.setBackground(new java.awt.Color(35, 130, 118));
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CONTROL DE DISPOSITIVOS");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Users\\criizziiy\\Desktop\\logoSena.jpg")); // NOI18N
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(119, 119, 119)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(125, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(29, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(btnRegistroUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnRegistroDispositivos)
+                .addGap(21, 21, 21))
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(btnRegistroUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 394, Short.MAX_VALUE)
-                        .addComponent(btnRegistroDispositivos))
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(158, 158, 158)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(166, 166, 166)
-                                .addComponent(btnConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(66, 66, 66)
-                                .addComponent(btnActualizacion)
-                                .addGap(61, 61, 61)
-                                .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(10, 10, 10))
+                        .addGap(170, 170, 170)
+                        .addComponent(btnConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(61, 61, 61)
+                        .addComponent(btnActualizacion)
+                        .addGap(57, 57, 57)
+                        .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(56, 56, 56)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnActualizacion, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(81, 81, 81)
+                    .addComponent(btnConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnActualizacion, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(109, 109, 109)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRegistroUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRegistroDispositivos, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9))
+                .addContainerGap())
         );
 
         getContentPane().add(jPanel1, "card2");
@@ -192,45 +211,10 @@ String roll;
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarActionPerformed
-        roll = "UsuarioAvanzado";
-        if(roll.equals("Administrador")){
-            JOptionPane.showMessageDialog(null,"tiene permiso");
-            
-        }
-        if(roll.equals("UsuarioAvanzado")){
-            JOptionPane.showMessageDialog(null,"No tiene permiso");
-
-        }
-    }//GEN-LAST:event_btnConsultarActionPerformed
-
-    private void btnReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportesActionPerformed
-        roll = "Administrador";
-        if(roll.equals("Administrador")){
-            JOptionPane.showMessageDialog(null,"tiene permiso");
-            
-        }
-        if(roll.equals("UsuarioAvanzado")){
-            JOptionPane.showMessageDialog(null,"No tiene permiso");
-
-        }
-    }//GEN-LAST:event_btnReportesActionPerformed
-
-    private void btnActualizacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizacionActionPerformed
-       if(roll.equals("Administrador")){
-            JOptionPane.showMessageDialog(null,"tiene permiso");
-            
-        }
-        if(roll.equals("UsuarioAvanzado")){
-            JOptionPane.showMessageDialog(null,"No tiene permiso");
-
-        }
-    }//GEN-LAST:event_btnActualizacionActionPerformed
-
     private void btnRegistroUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroUsuariosActionPerformed
         if(roll.equals("Administrador")){
             JOptionPane.showMessageDialog(null,"tiene permiso");
-            
+
         }
         if(roll.equals("UsuarioAvanzado")){
             JOptionPane.showMessageDialog(null,"No tiene permiso");
@@ -241,13 +225,48 @@ String roll;
     private void btnRegistroDispositivosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroDispositivosActionPerformed
         if(roll.equals("Administrador")){
             JOptionPane.showMessageDialog(null,"tiene permiso");
-            
+
         }
         if(roll.equals("UsuarioAvanzado")){
             JOptionPane.showMessageDialog(null,"No tiene permiso");
 
         }
     }//GEN-LAST:event_btnRegistroDispositivosActionPerformed
+
+    private void btnConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaActionPerformed
+        roll = "UsuarioAvanzado";
+        if(roll.equals("Administrador")){
+            JOptionPane.showMessageDialog(null,"tiene permiso");
+
+        }
+        if(roll.equals("UsuarioAvanzado")){
+            JOptionPane.showMessageDialog(null,"No tiene permiso");
+
+        }
+    }//GEN-LAST:event_btnConsultaActionPerformed
+
+    private void btnActualizacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizacionActionPerformed
+        if(roll.equals("Administrador")){
+            JOptionPane.showMessageDialog(null,"tiene permiso");
+
+        }
+        if(roll.equals("UsuarioAvanzado")){
+            JOptionPane.showMessageDialog(null,"No tiene permiso");
+
+        }
+    }//GEN-LAST:event_btnActualizacionActionPerformed
+
+    private void btnReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportesActionPerformed
+        roll = "Administrador";
+        if(roll.equals("Administrador")){
+            JOptionPane.showMessageDialog(null,"tiene permiso");
+
+        }
+        if(roll.equals("UsuarioAvanzado")){
+            JOptionPane.showMessageDialog(null,"No tiene permiso");
+
+        }
+    }//GEN-LAST:event_btnReportesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -286,7 +305,7 @@ String roll;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnActualizacion;
-    private javax.swing.JButton btnConsultar;
+    private javax.swing.JButton btnConsulta;
     private javax.swing.JButton btnRegistroDispositivos;
     private javax.swing.JButton btnRegistroUsuarios;
     private javax.swing.JButton btnReportes;
@@ -301,6 +320,7 @@ String roll;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
