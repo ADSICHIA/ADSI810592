@@ -45,7 +45,6 @@ public class tagUsuario extends javax.swing.JFrame {
         imgDispositivo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(new java.awt.CardLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -88,13 +87,11 @@ public class tagUsuario extends javax.swing.JFrame {
 
         jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        imgUsuario.setIcon(new javax.swing.ImageIcon("C:\\Users\\Daniel\\Desktop\\facebook-image1.jpg")); // NOI18N
-        imgUsuario.setText("jLabel9");
+        imgUsuario.setBackground(new java.awt.Color(204, 204, 204));
         imgUsuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         imgUsuario.setPreferredSize(new java.awt.Dimension(200, 200));
 
-        imgDispositivo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Daniel\\Desktop\\laptop.jpg")); // NOI18N
-        imgDispositivo.setText("jLabel7");
+        imgDispositivo.setBackground(new java.awt.Color(204, 204, 204));
         imgDispositivo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         imgDispositivo.setPreferredSize(new java.awt.Dimension(200, 200));
 
@@ -184,7 +181,7 @@ public class tagUsuario extends javax.swing.JFrame {
                         .addGap(145, 145, 145))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(imgUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(26, 26, 26)
                         .addComponent(imgDispositivo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
