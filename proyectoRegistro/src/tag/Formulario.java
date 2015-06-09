@@ -58,6 +58,7 @@ public class Formulario extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(252, 115, 35));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Enviar");
         jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -68,6 +69,7 @@ public class Formulario extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(252, 115, 35));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Borrar");
         jButton2.setBorder(null);
 
