@@ -42,6 +42,7 @@ String roll;
         btnReportes = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        btnLogOut = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -133,30 +134,39 @@ String roll;
                 .addGap(23, 23, 23))
         );
 
+        btnLogOut.setIcon(new javax.swing.ImageIcon("D:\\Users\\criizziiy\\Desktop\\logout.jpg")); // NOI18N
+        btnLogOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogOutActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(btnRegistroUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnRegistroDispositivos)
-                .addGap(21, 21, 21))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(170, 170, 170)
+                .addComponent(btnConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61)
+                .addComponent(btnActualizacion)
+                .addGap(57, 57, 57)
+                .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(35, 35, 35)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                        .addComponent(btnLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(btnConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(61, 61, 61)
-                        .addComponent(btnActualizacion)
-                        .addGap(57, 57, 57)
-                        .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(120, Short.MAX_VALUE))
+                        .addGap(21, 21, 21)
+                        .addComponent(btnRegistroUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnRegistroDispositivos)))
+                .addGap(21, 21, 21))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,7 +174,9 @@ String roll;
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(btnLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(56, 56, 56)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -212,8 +224,11 @@ String roll;
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegistroUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroUsuariosActionPerformed
+        roll = "Administrador";
         if(roll.equals("Administrador")){
-            JOptionPane.showMessageDialog(null,"tiene permiso");
+            FromUsuarios registroUsuarios = new FromUsuarios();
+            registroUsuarios.setVisible(true);
+            this.setVisible(false);
 
         }
         if(roll.equals("UsuarioAvanzado")){
@@ -223,8 +238,11 @@ String roll;
     }//GEN-LAST:event_btnRegistroUsuariosActionPerformed
 
     private void btnRegistroDispositivosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroDispositivosActionPerformed
+        roll = "Administrador";
         if(roll.equals("Administrador")){
-            JOptionPane.showMessageDialog(null,"tiene permiso");
+            Registro registroDispositivos = new Registro();
+            registroDispositivos.setVisible(true);
+            this.setVisible(false);
 
         }
         if(roll.equals("UsuarioAvanzado")){
@@ -236,8 +254,10 @@ String roll;
     private void btnConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaActionPerformed
         roll = "UsuarioAvanzado";
         if(roll.equals("Administrador")){
-            JOptionPane.showMessageDialog(null,"tiene permiso");
-
+            Formulario consulta = new Formulario();
+            consulta.setVisible(true);
+            this.setVisible(false);
+            
         }
         if(roll.equals("UsuarioAvanzado")){
             JOptionPane.showMessageDialog(null,"No tiene permiso");
@@ -246,8 +266,11 @@ String roll;
     }//GEN-LAST:event_btnConsultaActionPerformed
 
     private void btnActualizacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizacionActionPerformed
+        roll = "Administrador";
         if(roll.equals("Administrador")){
-            JOptionPane.showMessageDialog(null,"tiene permiso");
+           Frmtabla actualizarDatos = new Frmtabla();
+           actualizarDatos.setVisible(true);
+           this.setVisible(false);
 
         }
         if(roll.equals("UsuarioAvanzado")){
@@ -259,14 +282,21 @@ String roll;
     private void btnReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportesActionPerformed
         roll = "Administrador";
         if(roll.equals("Administrador")){
-            JOptionPane.showMessageDialog(null,"tiene permiso");
-
+            Reporte reportes = new Reporte();
+            reportes.setVisible(true);
+            this.setVisible(false);
         }
         if(roll.equals("UsuarioAvanzado")){
             JOptionPane.showMessageDialog(null,"No tiene permiso");
 
         }
     }//GEN-LAST:event_btnReportesActionPerformed
+
+    private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
+        Login logOut = new Login();
+        logOut.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnLogOutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -306,6 +336,7 @@ String roll;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnActualizacion;
     private javax.swing.JButton btnConsulta;
+    private javax.swing.JButton btnLogOut;
     private javax.swing.JButton btnRegistroDispositivos;
     private javax.swing.JButton btnRegistroUsuarios;
     private javax.swing.JButton btnReportes;
