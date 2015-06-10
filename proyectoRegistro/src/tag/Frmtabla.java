@@ -1,6 +1,5 @@
 package tag;
 
-
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -25,7 +24,7 @@ public class Frmtabla extends javax.swing.JFrame {
         modelo.addColumn("Ciudad");
         modelo.addColumn("Fecha");
         modelo.addColumn("Foto");
-        
+
     }
 
     /**
@@ -64,6 +63,7 @@ public class Frmtabla extends javax.swing.JFrame {
         btnActualizado = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         jTextField10 = new javax.swing.JTextField();
+        btnHome2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
 
@@ -132,14 +132,18 @@ public class Frmtabla extends javax.swing.JFrame {
 
         jTextField10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 0)));
 
+        btnHome2.setBackground(new java.awt.Color(255, 255, 255));
+        btnHome2.setIcon(new javax.swing.ImageIcon("D:\\Users\\criizziiy\\Pictures\\btnHome.jpg")); // NOI18N
+        btnHome2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHome2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnActualizado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(52, 52, 52)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -187,6 +191,14 @@ public class Frmtabla extends javax.swing.JFrame {
                                 .addGap(42, 42, 42)
                                 .addComponent(btnExaminar, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(351, 351, 351))))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnActualizado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnHome2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,7 +242,9 @@ public class Frmtabla extends javax.swing.JFrame {
                     .addComponent(btnExaminar)
                     .addComponent(foto, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnHome2)
+                .addGap(18, 18, 18)
                 .addComponent(btnActualizado)
                 .addContainerGap())
         );
@@ -280,16 +294,22 @@ public class Frmtabla extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnExaminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExaminarActionPerformed
-         JFileChooser abrir = new JFileChooser();
+        JFileChooser abrir = new JFileChooser();
         int boton = abrir.showOpenDialog(null);
         if (boton == JFileChooser.APPROVE_OPTION) {
-            
-            foto.setText("...."+boton);
-           
+
+            foto.setText("...." + boton);
 
         }
 
     }//GEN-LAST:event_btnExaminarActionPerformed
+
+    private void btnHome2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHome2ActionPerformed
+        VentanaPrincipal vPrincipal = new VentanaPrincipal();
+        vPrincipal.setVisible(true);
+
+        this.setVisible(false);
+    }//GEN-LAST:event_btnHome2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -329,6 +349,9 @@ public class Frmtabla extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnActualizado;
     private javax.swing.JButton btnExaminar;
+    private javax.swing.JButton btnHome;
+    private javax.swing.JButton btnHome1;
+    private javax.swing.JButton btnHome2;
     private javax.swing.JLabel foto;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
