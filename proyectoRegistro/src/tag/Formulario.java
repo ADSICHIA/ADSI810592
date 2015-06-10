@@ -1,10 +1,9 @@
 package tag;
 
-
 import javax.swing.table.DefaultTableModel;
 
-
 public class Formulario extends javax.swing.JFrame {
+
     DefaultTableModel modelo;
 
     /**
@@ -12,8 +11,7 @@ public class Formulario extends javax.swing.JFrame {
      */
     public Formulario() {
         initComponents();
-       
-        
+
     }
 
     /**
@@ -29,11 +27,12 @@ public class Formulario extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnEnviar = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        btnHome = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -56,22 +55,22 @@ public class Formulario extends javax.swing.JFrame {
 
         jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 0)));
 
-        jButton1.setBackground(new java.awt.Color(94, 179, 25));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Enviar");
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnEnviar.setBackground(new java.awt.Color(94, 179, 25));
+        btnEnviar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnEnviar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEnviar.setText("Enviar");
+        btnEnviar.setBorder(null);
+        btnEnviar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnEnviarActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(252, 115, 35));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Borrar");
-        jButton2.setBorder(null);
+        btnLimpiar.setBackground(new java.awt.Color(252, 115, 35));
+        btnLimpiar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnLimpiar.setForeground(new java.awt.Color(255, 255, 255));
+        btnLimpiar.setText("Borrar");
+        btnLimpiar.setBorder(null);
 
         jLabel1.setText("Documento");
 
@@ -99,23 +98,36 @@ public class Formulario extends javax.swing.JFrame {
                 .addGap(31, 31, 31))
         );
 
+        btnHome.setBackground(new java.awt.Color(255, 255, 255));
+        btnHome.setIcon(new javax.swing.ImageIcon("D:\\Users\\criizziiy\\Pictures\\btnHome.jpg")); // NOI18N
+        btnHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHomeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(233, 233, 233)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(103, 103, 103)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(153, Short.MAX_VALUE)
+                .addContainerGap(171, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(63, 63, 63)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(101, 101, 101))
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(233, 233, 233)
+                        .addComponent(btnEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(103, 103, 103)
+                        .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(btnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,18 +140,20 @@ public class Formulario extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(121, 121, 121))
+                    .addComponent(btnEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45)
+                .addComponent(btnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,11 +163,17 @@ public class Formulario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+    private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
 
 // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnEnviarActionPerformed
+
+    private void btnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeActionPerformed
+        VentanaPrincipal vPrincipal = new VentanaPrincipal();
+        vPrincipal.setVisible(true);
+
+        this.setVisible(false);
+    }//GEN-LAST:event_btnHomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,8 +211,9 @@ public class Formulario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnEnviar;
+    private javax.swing.JButton btnHome;
+    private javax.swing.JButton btnLimpiar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
